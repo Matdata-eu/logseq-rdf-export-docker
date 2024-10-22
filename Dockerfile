@@ -9,8 +9,8 @@ ARG NODE_MAJOR
 
 # Install Clojure & Babashka
 RUN apt update && apt remove -y cmdtest && apt install -y npm curl ca-certificates gnupg && \
-    curl -L -O https://github.com/clojure/brew-install/releases/latest/download/linux-install.sh && chmod +x linux-install.sh && ./linux-install.sh && \
-    ["/bin/bash", "-c", "bash < <(curl -s https://raw.githubusercontent.com/babashka/babashka/master/install)"]
+    curl -L -O https://github.com/clojure/brew-install/releases/latest/download/linux-install.sh && chmod +x linux-install.sh && ./linux-install.sh
+RUN ["/bin/bash", "-c", "bash < <(curl -s https://raw.githubusercontent.com/babashka/babashka/master/install)"]
 
 # Install Node.js
 RUN mkdir -p /etc/apt/keyrings && \
