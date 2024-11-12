@@ -33,7 +33,9 @@ rdf:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
   stage: rdf
   script:
-    - logseq-rdf-export notes.ttl
+    - echo "The following line is to avoid a check in logseq-rdf-export targetting github actions"
+    - unset CI
+    - logseq-rdf-export notes.ttl --directory $CI_PROJECT_DIR
   artifacts:
     paths:
       - notes.ttl
