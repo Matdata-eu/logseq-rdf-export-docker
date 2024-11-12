@@ -14,7 +14,7 @@ A docker image is available on [Dockerhub](https://hub.docker.com/r/mathiasvda/l
 Example usage:
 
 ```sh
-$ docker run -it -v <path-to-logseq-graph-directory>:/data /mathiasvda/logseq-rdf-export logseq-rdf-export docs.ttl
+$ docker run -it -v <path-to-logseq-graph-directory>:/data mathiasvda/logseq-rdf-export logseq-rdf-export docs.ttl
 ```
 
 ### Gitlab
